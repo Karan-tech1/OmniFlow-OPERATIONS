@@ -1,0 +1,34 @@
+[
+  {
+    "id": "dev-admin@example.com",
+    "name": "Admin User",
+    "email": "admin@example.com",
+    "role": "ADMIN",
+    "passwordHash": "$2a$10$.O.h7i0rb3bttQrceRvOrOiPZFynh7Xrimaiket4OpY0fmvyJPuHe",
+    "isActive": true
+  },
+  {
+    "id": "dev-sales@example.com",
+    "name": "Sales User",
+    "email": "sales@example.com",
+    "role": "SALES",
+    "passwordHash": "$2a$10$.O.h7i0rb3bttQrceRvOrOiPZFynh7Xrimaiket4OpY0fmvyJPuHe",
+    "isActive": true
+  },
+  {
+    "id": "dev-warehouse@example.com",
+    "name": "Warehouse Manager",
+    "email": "warehouse@example.com",
+    "role": "WAREHOUSE",
+    "passwordHash": "$2a$10$.O.h7i0rb3bttQrceRvOrOiPZFynh7Xrimaiket4OpY0fmvyJPuHe",
+    "isActive": true
+  },
+  {
+    "id": "dev-accounts@example.com",
+    "name": "Accounts User",
+    "email": "accounts@example.com",
+    "role": "ACCOUNTS",
+    "passwordHash": "$2a$10$.O.h7i0rb3bttQrceRvOrOiPZFynh7Xrimaiket4OpY0fmvyJPuHe",
+    "isActive": true
+  }
+]

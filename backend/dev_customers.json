@@ -1,0 +1,74 @@
+[
+  {
+    "id": "c1",
+    "name": "Chennai Bulk Mart",
+    "businessName": "Chennai Bulk Mart",
+    "mobile": "9445566778",
+    "type": "WHOLESALE",
+    "status": "INACTIVE",
+    "address": "12 Commercial Road, Chennai",
+    "createdAt": "2026-08-11T14:02:18.967Z"
+  },
+  {
+    "id": "c2",
+    "name": "Kolkata Wholesale",
+    "businessName": "Kolkata Wholesale Agency",
+    "mobile": "9333444555",
+    "type": "WHOLESALE",
+    "status": "ACTIVE",
+    "address": "45 Station Road, Kolkata",
+    "createdAt": "2026-08-11T14:02:18.967Z"
+  },
+  {
+    "id": "c3",
+    "name": "Ramesh Gupta",
+    "businessName": "Gupta General Store",
+    "mobile": "8765432109",
+    "type": "RETAIL",
+    "status": "LEAD",
+    "address": "88 Market Street, Delhi",
+    "createdAt": "2026-08-11T14:02:18.967Z",
+    "nextFollowUpAt": "2026-08-11T00:00:00.000Z",
+    "notes": "call client regarding salery\n"
+  },
+  {
+    "id": "c4",
+    "name": "Northern Supplies",
+    "businessName": "Northern Supplies Ltd",
+    "mobile": "9871234567",
+    "type": "WHOLESALE",
+    "status": "LEAD",
+    "address": "102 Industrial Hub, Chandigarh",
+    "createdAt": "2026-08-11T14:02:18.967Z"
+  },
+  {
+    "id": "c5",
+    "name": "Sundar Enterprises",
+    "businessName": "Sundar Enterprises Pvt Ltd",
+    "mobile": "9123456789",
+    "type": "DISTRIBUTOR",
+    "status": "ACTIVE",
+    "address": "15 Logistics Park, Mumbai",
+    "createdAt": "2026-08-11T14:02:18.967Z"
+  },
+  {
+    "id": "c6",
+    "name": "Patel Distribution",
+    "businessName": "Patel Distribution Network",
+    "mobile": "9988776655",
+    "type": "DISTRIBUTOR",
+    "status": "ACTIVE",
+    "address": "7 Ring Road, Ahmedabad",
+    "createdAt": "2026-08-11T14:02:18.967Z"
+  },
+  {
+    "id": "c7",
+    "name": "Vikram Traders",
+    "businessName": "Vikram Trading Co.",
+    "mobile": "9876543210",
+    "type": "WHOLESALE",
+    "status": "ACTIVE",
+    "address": "34 Trade Center, Bengaluru",
+    "createdAt": "2026-08-11T14:02:18.967Z"
+  }
+]

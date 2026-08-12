@@ -1,0 +1,33 @@
+openapi: 3.0.3
+info:
+  title: Nexus Operations API
+  version: 1.0.0
+  description: REST API for Mini ERP and CRM operations.
+servers:
+  - url: http://localhost:5000/api
+components:
+  securitySchemes:
+    bearerAuth: { type: http, scheme: bearer, bearerFormat: JWT }
+  schemas:
+    ApiResponse: { type: object, properties: { success: { type: boolean }, message: { type: string }, data: {} } }
+security: [{ bearerAuth: [] }]
+paths:
+  /auth/login:
+    post:
+      security: []
+      summary: Sign in and obtain a JWT
+      requestBody: { required: true, content: { application/json: { schema: { type: object, required: [email, password], properties: { email: { type: string }, password: { type: string } } } } } }
+      responses: { '200': { description: Authenticated, content: { application/json: { schema: { $ref: '#/components/schemas/ApiResponse' } } } }, '401': { description: Invalid credentials } }
+  /customers:
+    get: { summary: List customers, parameters: [{ name: search, in: query, schema: { type: string } }, { name: page, in: query, schema: { type: integer } }], responses: { '200': { description: Customer list } } }
+    post: { summary: Create customer, responses: { '201': { description: Customer created }, '422': { description: Validation failed } } }
+  /products:
+    get: { summary: List products, responses: { '200': { description: Product list } } }
+    post: { summary: Create product (Admin), responses: { '201': { description: Product created }, '403': { description: Forbidden } } }
+  /inventory/movements:
+    post: { summary: Record stock IN/OUT (Admin or Warehouse), responses: { '201': { description: Movement created }, '409': { description: Insufficient stock } } }
+  /challans:
+    get: { summary: List sales challans, responses: { '200': { description: Challan list } } }
+    post: { summary: Create draft challan, responses: { '201': { description: Draft created } } }
+  /challans/{id}/confirm:
+    post: { summary: Confirm draft atomically, parameters: [{ name: id, in: path, required: true, schema: { type: string } }], responses: { '200': { description: Confirmed }, '409': { description: Insufficient stock or invalid state } } }
