@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "node dist/src/server.js",
     "test": "vitest run",
     "prisma:migrate": "prisma migrate dev",
     "prisma:seed": "prisma db seed"
@@ -16,6 +16,18 @@
   "dependencies": {
     "@prisma/client": "^6.2.1",
     "@sentry/node": "^10.70.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/morgan": "^1.9.9",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^22.10.5",
+    "@types/node-cron": "^3.0.11",
+    "@types/nodemailer": "^8.0.1",
+    "@types/pdfkit": "^0.17.6",
+    "@types/pino": "^7.0.4",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
@@ -31,26 +43,14 @@
     "pdfkit": "^0.19.1",
     "pino": "^10.3.1",
     "pino-http": "^11.0.0",
+    "prisma": "^6.2.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
     "zod": "^3.24.1"
   },
   "devDependencies": {
     "@electric-sql/pglite": "^0.5.4",
-    "@types/bcryptjs": "^2.4.6",
-    "@types/cookie-parser": "^1.4.10",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0",
-    "@types/jsonwebtoken": "^9.0.7",
-    "@types/morgan": "^1.9.9",
-    "@types/multer": "^2.2.0",
-    "@types/node": "^22.10.5",
-    "@types/node-cron": "^3.0.11",
-    "@types/nodemailer": "^8.0.1",
-    "@types/pdfkit": "^0.17.6",
-    "@types/pino": "^7.0.4",
     "pglite-server": "^0.1.5",
-    "prisma": "^6.2.1",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   }
 }
