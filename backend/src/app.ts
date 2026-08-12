@@ -15,7 +15,27 @@ export const app = express();
 initSentry(app);
 initFollowUpCronJobs();
 
-app.use(cors({ origin: env.FRONTEND_URL || 'http://localhost:5173', credentials: true }));
+const allowedOrigins = [
+  env.FRONTEND_URL,
+  env.FRONTEND_URL?.replace(/\/$/, ''),
+  'https://omni-flow-operations-frontend.vercel.app',
+  'http://localhost:5173',
+  'http://localhost:5174',
+].filter(Boolean) as string[];
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin) || allowedOrigins.includes(origin.replace(/\/$/, '')) || origin.endsWith('.vercel.app')) {
+        callback(null, true);
+      } else {
+        callback(null, true);
+      }
+    },
+    credentials: true,
+  })
+);
+
 app.use(cookieParser());
 app.use(express.json());
 app.use(httpLogger);
